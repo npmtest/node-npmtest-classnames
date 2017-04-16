@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-classnames/classnames/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-classnames/node_modules/classnames/bind.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,13 +194,13 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-classnames">npmtest-classnames (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-classnames/classnames/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-classnames/node_modules/classnames/bind.js</span></h1>
     <h2>
         
         Statements: <span class="metric">20.83% <small>(5 / 24)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">13.04% <small>(3 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">10.34% <small>(3 / 29)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
         Functions: <span class="metric">33.33% <small>(1 / 3)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-classnames/classnames/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-classnames/node_modules/classnames/</a> &#187; bind.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -322,49 +324,48 @@
 &nbsp;
 	var hasOwn = {}.hasOwnProperty;
 &nbsp;
-<span class="fstat-no" title="function not covered">	function classNames () {</span>
-<span class="cstat-no" title="statement not covered">		var classes = [];</span>
+<span class="fstat-no" title="function not covered" >	function classNames () {</span>
+<span class="cstat-no" title="statement not covered" >		var classes = [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		for (var i = 0; i &lt; arguments.length; i++) {</span>
-<span class="cstat-no" title="statement not covered">			var arg = arguments[i];</span>
-<span class="cstat-no" title="statement not covered">			if (!arg) <span class="cstat-no" title="statement not covered">continue;</span></span>
+<span class="cstat-no" title="statement not covered" >		for (var i = 0; i &lt; arguments.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >			var arg = arguments[i];</span>
+<span class="cstat-no" title="statement not covered" >			if (!arg) <span class="cstat-no" title="statement not covered" >continue;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">			var argType = typeof arg;</span>
+<span class="cstat-no" title="statement not covered" >			var argType = typeof arg;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">			if (argType === 'string' || argType === 'number') {</span>
-<span class="cstat-no" title="statement not covered">				classes.push(arg);</span>
-			} else <span class="cstat-no" title="statement not covered">if (Array.isArray(arg)) {</span>
-<span class="cstat-no" title="statement not covered">				classes.push(classNames.apply(null, arg));</span>
-			} else <span class="cstat-no" title="statement not covered">if (argType === 'object') {</span>
-<span class="cstat-no" title="statement not covered">				for (var key in arg) {</span>
-<span class="cstat-no" title="statement not covered">					if (hasOwn.call(arg, key) &amp;&amp; arg[key]) {</span>
-<span class="cstat-no" title="statement not covered">						classes.push(key);</span>
+<span class="cstat-no" title="statement not covered" >			if (argType === 'string' || argType === 'number') {</span>
+<span class="cstat-no" title="statement not covered" >				classes.push(this &amp;&amp; this[arg] || arg);</span>
+			} else <span class="cstat-no" title="statement not covered" >if (Array.isArray(arg)) {</span>
+<span class="cstat-no" title="statement not covered" >				classes.push(classNames.apply(this, arg));</span>
+			} else <span class="cstat-no" title="statement not covered" >if (argType === 'object') {</span>
+<span class="cstat-no" title="statement not covered" >				for (var key in arg) {</span>
+<span class="cstat-no" title="statement not covered" >					if (hasOwn.call(arg, key) &amp;&amp; arg[key]) {</span>
+<span class="cstat-no" title="statement not covered" >						classes.push(this &amp;&amp; this[key] || key);</span>
 					}
 				}
 			}
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		return classes.join(' ');</span>
+<span class="cstat-no" title="statement not covered" >		return classes.join(' ');</span>
 	}
 &nbsp;
-	<span class="missing-if-branch" title="else path not taken">E</span>if (typeof module !== 'undefined' &amp;&amp; module.exports) {
+	<span class="missing-if-branch" title="else path not taken" >E</span>if (typeof module !== 'undefined' &amp;&amp; module.exports) {
 		module.exports = classNames;
-	} else <span class="cstat-no" title="statement not covered">if (typeof define === 'function' &amp;&amp; typeof define.amd === 'object' &amp;&amp; define.amd) {</span>
+	} else <span class="cstat-no" title="statement not covered" >if (typeof define === 'function' &amp;&amp; typeof define.amd === 'object' &amp;&amp; define.amd) {</span>
 		// register as 'classnames', consistent with npm package name
-<span class="cstat-no" title="statement not covered">		define('classnames', [], <span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">			return classNames;</span>
+<span class="cstat-no" title="statement not covered" >		define('classnames', [], <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >			return classNames;</span>
 		});
 	} else {
-<span class="cstat-no" title="statement not covered">		window.classNames = classNames;</span>
+<span class="cstat-no" title="statement not covered" >		window.classNames = classNames;</span>
 	}
 }());
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 07:03:01 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 08:32:26 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
